@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 40px;
+}
+
+
+section {
+    height: 100vh;
+    color: #cdd0d4;
+}
+
+section:nth-child(1) {
+    background-color: black;
+    padding: 7%;
+    position: relative;
+}
+
+section:nth-child(1) > p, section:nth-child(1) > h2 {
+    /* z-index: 3; */
+    width: 70%;
+}
+
+.bgimg {
+    position: absolute;
+    top: 0;
+    right: -20px;
+    background-image: url(assets/herome.jpeg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+    z-index: 0;
+    width: 80vw;
+    height: 100vh;
+    opacity: 0.4;
+}
+
+section:nth-child(2) {
+    background-color: rgb(25, 22, 32);
+    display: grid;
+    place-items: center;
+}
+
+.card {
+    background-color: black;
+    width: 60%;
+    height: 60%;
+    padding: 10%;
+    box-shadow: 1px -2px 184px 133px rgba(0,0,0,0.65);
+    -webkit-box-shadow: 1px -2px 184px 133px rgba(0,0,0,0.65);
+    -moz-box-shadow: 1px -2px 184px 133px rgba(0,0,0,0.65);
+    
+}
