@@ -4,56 +4,195 @@
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+}
+
 body {
     font-family: 'Dancing Script', cursive;
     font-family: 'Montserrat Alternates', sans-serif;
-    font-size: 40px;
+    font-size: 20px;
+    background-color: #000000;
 }
 
 
 section {
-    height: 100vh;
     color: #cdd0d4;
 }
 
-section:nth-child(1) {
-    background-color: black;
+.section1 {
+    height: 100vh;
+    background-color: #000000;
     padding: 7%;
     position: relative;
+    display: grid;
+    place-content: center;
 }
 
-section:nth-child(1) > p, section:nth-child(1) > h2 {
-    /* z-index: 3; */
+.section1 > p, .section1 > h2 {
+    z-index: 3;
     width: 70%;
 }
 
+.hero {
+    z-index: 3;
+    display: flex;
+    width: 80%;
+}
+
 .bgimg {
-    position: absolute;
-    top: 0;
-    right: -20px;
     background-image: url(assets/herome.jpeg);
     background-repeat: no-repeat;
-    background-position: right;
+    background-position: center;
     background-size: contain;
-    z-index: 0;
-    width: 80vw;
-    height: 100vh;
-    opacity: 0.4;
+    scale: 1.5;
+    opacity: 0.7;
+
+    /* width:300px;
+    height: 300px; */
+    min-width: 200px;
+    /* border: 2px solid red; */
+    flex-basis: 70%;
+
 }
 
-section:nth-child(2) {
-    background-color: rgb(25, 22, 32);
-    display: grid;
-    place-items: center;
+.hero-text {
+    /* border: 2px solid green; */
+
 }
+
+.hero-extra {
+    /* border: 2px solid yellow; */
+    position: absolute;
+    top: 20px;
+    width: 500px;
+    right: 300px;
+    padding: 20px;
+    background-color: #29796e;
+    display: none;
+}
+
+.more-button {
+    padding: 20px;
+    background-color: #29796e;
+    width: 300px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.more-button:hover {
+    cursor: pointer;
+}
+
+.section2 {
+    background-color: #29796e10;
+    /* padding-top: 75px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0px;
+    min-height: 100vh;
+}
+
 
 .card {
+    /* background-image: radial-gradient( #29796e, #cdd0d4); */
+    border-radius: 20px;
+    width: 90%;
+    /* border-bottom: 2px dashed rgb(53, 34, 32); */
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    /* position: relative; */
+}
+
+.video {
+    position: fixed;
+    top: 0;
+    left: 0%;
+    width: 100%;
+    min-height: 130%;
+    -webkit-filter: blur(3px);
+    -moz-filter: blur(3px);
+    -o-filter: blur(3px);
+    -ms-filter: blur(3px);
+    filter: blur(3px);
+    z-index: -1;
+}
+
+.projects {
+    display: flex;
+    gap: 40px 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.projects > * {
+    /* border: 1px solid blue; */
+    min-width: 300px;
+    max-width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project {
+    position: relative;
+}
+.project:hover {
+    .project-extra {
+        display: flex;
+    }
+    .mockups {
+        opacity: 0.2;
+    }
+}
+
+.project-data {
+    background-color: #29796e;
+    position: absolute;
+    top: -25px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0px 10px;
+
+}
+.project > img {
+    width: 100%;
+}
+
+.mockups {
+    width: 100%;
+    background-image: url(assets/projects/invitation.png);
+    min-height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;      
+}
+
+.project-extra {
+    position: absolute;
+    top: 50%;
+    left: 50%;
     background-color: black;
-    width: 60%;
-    height: 60%;
-    padding: 10%;
-    box-shadow: 1px -2px 184px 133px rgba(0,0,0,0.65);
-    -webkit-box-shadow: 1px -2px 184px 133px rgba(0,0,0,0.65);
-    -moz-box-shadow: 1px -2px 184px 133px rgba(0,0,0,0.65);
-    
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.project-extra :nth-child(1), .project-extra :nth-child(2) {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.project-extra >:nth-child(1) {
+    border-right: 1px solid #29796e;
+}
+
+.project-extra :nth-child(1):hover, .project-extra :nth-child(2):hover{
+    color: #29796e;
+    cursor: pointer;
 }
