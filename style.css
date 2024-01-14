@@ -41,12 +41,19 @@ section {
     margin: 20px;
     width: fit-content;
     max-width: 700px;
+    background-color: #29796e20;
+    padding: 20px;
 }
 
 .hero-text > h1 {
     font-size: clamp(40px, 15vw, 80px);
     /* font-size: 15vw; */
 }
+
+.hero, .hero-button {
+    border-radius: 10px;
+}
+
 .hero-button {
     background-color: #29796e;
     width: clamp(200px, 30vw, 300px);
@@ -56,8 +63,12 @@ section {
 }
 
 .hero-button a {
-    padding: 20px;
     color: var(--sub-color);
+}
+
+.hero-button > a > p {
+    padding: 20px;
+    
 }
 
 .hero-button:hover {
@@ -128,8 +139,8 @@ section {
 }
 
 .projects > * {
-    min-width: 400px;
-    max-width: 500px;
+    min-width: 380px;
+    max-width: 450px;
     display: flex;
     align-items: center;
     justify-content: center;
